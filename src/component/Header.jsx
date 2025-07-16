@@ -85,7 +85,12 @@ export default function Header() {
               className="absolute left-0 z-10 mt-3 w-full overflow-hidden rounded-none bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                <div className={`grid grid-cols-${categories.length}`}>
+                <div className={`grid ${categories.length === 2 ? 'grid-cols-2' :
+                    categories.length === 3 ? 'grid-cols-3' :
+                      categories.length === 4 ? 'grid-cols-4' :
+                        categories.length === 5 ? 'grid-cols-5' :
+                          'grid-cols-1'
+                  }`}>
                   {categories.map((cate) => (
                     <div>
                       <div className='font-semibold uppercase text-orange-500 text-xl border-b-4 border-orange-500' key={cate.id}>{cate.name}</div>
