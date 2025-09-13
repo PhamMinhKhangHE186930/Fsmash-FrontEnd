@@ -8,6 +8,7 @@ import { formatPrice } from '../utils/formatter';
 import { motion } from 'framer-motion'
 import TypewriterComponent from 'typewriter-effect';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 function HomeScreen() {
     const {
@@ -23,6 +24,7 @@ function HomeScreen() {
             <ReactFullpage
                 render={() => (
                     <ReactFullpage.Wrapper>
+                        {/* About section */}
                         <div className='section'>
                             {/* background animation and color */}
                             <motion.div
@@ -96,7 +98,7 @@ function HomeScreen() {
                                     className="col-span-12 flex flex-col items-center absolute bottom-10 left-1/2 -translate-x-1/2 group cursor-pointer"
                                 >
                                     <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">
-                                        Scroll to explore
+                                        Cuộn để tiếp tục
                                     </span>
                                     <div className="w-6 h-10 border-2 border-gray-400 group-hover:border-blue-400 rounded-full flex justify-center transition-colors">
                                         <motion.div
@@ -109,6 +111,7 @@ function HomeScreen() {
                             </div>
 
                         </div>
+                        {/* Brand Story section */}
                         <div className='section'>
                             <div className='grid md:grid-cols-12 gap-4 items-center relative z-10 h-[600px]'>
                                 <div className='md:col-span-5 flex justify-center'>
@@ -116,8 +119,8 @@ function HomeScreen() {
                                         className="w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-3xl object-cover"
                                         src='https://images.wallpaperscraft.com/image/single/shuttlecock_badminton_cover_206634_1600x900.jpg'
                                         alt='banner'
-                                        initial={{ opacity: 0, x: 60 }}
-                                        animate={{ opacity: 1, x: 0, transition: { duration: 1.25, ease: 'easeInOut' } }}
+                                        initial={{ opacity: 0, x: -60 }}
+                                        whileInView={{ opacity: 1, x: 0, transition: { duration: 1.25, ease: 'easeInOut' } }}
                                         whileHover={{ scale: 1.04, transition: { duration: 0.45, ease: 'easeInOut' } }}
                                         style={{ perspective: 2000 }}
                                     />
@@ -136,25 +139,17 @@ function HomeScreen() {
                                         </motion.div> */}
                                         <motion.div
                                             initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
                                             transition={{ type: 'tween', duration: 0.8, delay: 0.4, ease: 'linear' }}
                                         >
                                             <motion.h1
                                                 initial={{ opacity: 0, y: 50 }}
-                                                animate={{ opacity: 1, y: 0 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 1, delay: 0.3 }}
                                                 className="mb-6 bg-gradient-to-r from-black via-blue-600 to-green-600 bg-clip-text text-transparent text-3xl"
                                             >
                                                 Câu chuyện đằng sau thương hiệu FSmash
                                             </motion.h1>
-                                            {/* <motion.h1
-                                                initial={{ opacity: 0, y: 50 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 1, delay: 0.3 }}
-                                                className="mb-6 bg-gradient-to-r from-black via-blue-600 to-green-600 bg-clip-text text-transparent text-lg"
-                                            >
-                                                FSmash ra đời từ niềm đam mê cầu lông và mong muốn mang đến những phụ kiện giá rẻ – chất lượng – tiện lợi cho sinh viên và người chơi phong trào tại Hà Nội.
-                                            </motion.h1> */}
                                             <div className="text-lg text-gray-700">
                                                 <TypewriterComponent
                                                     options={{
@@ -171,9 +166,85 @@ function HomeScreen() {
                                 </div>
                             </div>
                         </div>
+                        {/* Footer section */}
                         <div className='section fp-auto-height'>
-                            <div className='h-64 flex justify-center items-center'>
-                                <h1>Footer</h1>
+                            <motion.div
+                                className='absolute bg-blue-800 inset-0 -z-10 '
+                            />
+                            <div className='grid md:grid-cols-12 gap-4 text-white py-10 px-5'>
+                                <div className='md:col-span-4'>
+                                    <h1 className='text-xl'>FSmash</h1>
+                                    <br />
+                                    <p className='text-gray-300'>
+                                        Đối tác đáng tin cậy của bạn về thiết bị và phụ kiện cầu lông cao cấp. Nâng tầm trình độ chơi của bạn từ năm 2025.
+                                    </p>
+                                    <br />
+                                    <p className='text-gray-300 flex'>
+                                        <MapPinIcon className='size-6 mr-3' />
+                                        Khu Công Nghệ Cao Hòa Lạc, km 29, Đại lộ, Thăng Long, Hà Nội
+                                    </p>
+                                    <p className='text-gray-300 flex'>
+                                        <PhoneIcon className='size-6 mr-3' />
+                                        000-999-8888
+                                    </p>
+                                    <p className='text-gray-300 flex'>
+                                        <EnvelopeIcon className='size-6 mr-3' />
+                                        info@fpt.edu.vn
+                                    </p>
+                                </div>
+                                <div className='md:col-span-2 '>
+                                    <h1 className='text-xl'>Liên kết nhanh</h1>
+                                    <br />
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Trang chủ
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Sản phẩm
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Giới thiệu
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Liên hệ
+                                    </p>
+                                </div>
+                                <div className='md:col-span-2'>
+                                    <h1 className='text-xl'>Sản phẩm</h1>
+                                    <br />
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Cuốn cán vợt
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Băng cao su non
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Quấn cốt
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Băng cổ tay
+                                    </p>
+                                    <p className='text-gray-300 flex mb-3'>
+                                        Quả cầu lông
+                                    </p>
+                                </div>
+                                <div className='md:col-span-2'>
+                                    <h1 className='text-xl'>Dịch vụ</h1>
+                                </div>
+                                <div className='md:col-span-2'>
+                                    <h1 className='text-xl'>Hỗ trợ</h1>
+                                </div>
+                                <hr className='border-white col-span-12' />
+                                <div className='col-span-full'>
+                                    <p>
+                                        Built by students, for students
+                                    </p>
+                                </div>
+                                <hr className='border-white col-span-12' />
+                                <div className='col-span-full'>
+                                    <p className='text-white text-center'>
+                                        © 2025 FSmash. Bảo lưu mọi quyền | Chính sách bảo mật | Điều khoản dịch vụ | Liên hệ
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </ReactFullpage.Wrapper>
