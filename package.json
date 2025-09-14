@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "@fullpage/react-fullpage": "^0.1.49",
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
