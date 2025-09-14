@@ -71,7 +71,7 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm/6 font-semibold text-white">
+          <a href="/" className="text-sm/6 font-semibold text-white">
             TRANG CHỦ
           </a>
           <Popover>
@@ -106,8 +106,8 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm/6 font-semibold text-white">
-            SALE OFF
+          <a href="/sharing" className="text-sm/6 font-semibold text-white">
+            CHIA SẺ
           </a>
           <a href="#" className="text-sm/6 font-semibold text-white">
             GIỚI THIỆU
@@ -157,6 +157,12 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  TRANG CHỦ
+                </a>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                     Sản phẩm
