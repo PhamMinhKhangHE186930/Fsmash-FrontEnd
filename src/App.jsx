@@ -2,6 +2,7 @@ import HomeScreenProvider from "./context/HomeScreenProvider";
 import HomeScreen from "./page/HomeScreen";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PortfolioScreen from "./page/PortfolioScreen";
+import ProductList from "./page/ProductList";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
             <Route index element={<HomeScreen />} />
           </Route>
           <Route path="/portfolio" element={<PortfolioScreen />} />
+          <Route path="/products" element={<ProductList />} />
+
         </Routes>
       </HomeScreenProvider>
     </Router>
