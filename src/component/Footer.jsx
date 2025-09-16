@@ -71,6 +71,20 @@ const Footer = () => {
                 </div>
                 <div className='md:col-span-2'>
                     <h1 className='text-xl'>Hỗ trợ</h1>
+                    <br></br>
+                    <p className='text-gray-300 flex mb-3'>
+                        Trang chủ
+                    </p>
+                    <p className='text-gray-300 flex mb-3'>
+                        Sản phẩm
+                    </p>
+                    <p className='text-gray-300 flex mb-3'>
+                        Giới thiệu
+                    </p>
+                    <p className='text-gray-300 flex mb-3'>
+                        Liên hệ
+                    </p>
+
                 </div>
                 <hr className='border-white col-span-12' />
                 <div className='col-span-full'>
