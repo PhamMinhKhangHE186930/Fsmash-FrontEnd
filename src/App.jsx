@@ -6,6 +6,7 @@ import PortfolioScreen from "./page/PortfolioScreen";
 import Sharing from "./page/Sharing";
 import ProductList from "./page/ProductList";
 
+
 function App() {
   return (
     <Router>
@@ -17,7 +18,6 @@ function App() {
           <Route path="/portfolio" element={<PortfolioScreen />} />
           <Route path="/sharing" element={<Sharing />} />
           <Route path="/products" element={<ProductList />} />
-
         </Routes>
       </HomeScreenProvider>
     </Router>
