@@ -27,6 +27,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { HomeScreenContext } from '../context/HomeScreenProvider'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -71,12 +72,21 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm/6 font-semibold text-white">
-            TRANG CHỦ
-          </a>
-          <Popover>
+          <motion.a
+            href="/"
+            className="text-sm/6 font-semibold text-white"
+            whileHover={{ scale: 1.07 }}
+            transition={{ duration: 0.1 }}
+          >
+            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+              TRANG CHỦ
+            </span>
+          </motion.a>
+          {/* <Popover>
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              SẢN PHẨM
+              <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+                SẢN PHẨM
+              </span>
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
             </PopoverButton>
 
@@ -86,10 +96,10 @@ export default function Header() {
             >
               <div className="p-4">
                 <div className={`grid ${categories.length === 2 ? 'grid-cols-2' :
-                    categories.length === 3 ? 'grid-cols-3' :
-                      categories.length === 4 ? 'grid-cols-4' :
-                        categories.length === 5 ? 'grid-cols-5' :
-                          'grid-cols-1'
+                  categories.length === 3 ? 'grid-cols-3' :
+                    categories.length === 4 ? 'grid-cols-4' :
+                      categories.length === 5 ? 'grid-cols-5' :
+                        'grid-cols-1'
                   }`}>
                   {categories.map((cate) => (
                     <div>
@@ -104,17 +114,47 @@ export default function Header() {
                 </div>
               </div>
             </PopoverPanel>
-          </Popover>
-
-          <a href="#" className="text-sm/6 font-semibold text-white">
-            SALE OFF
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-white">
-            GIỚI THIỆU
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-white">
-            LIÊN HỆ
-          </a>
+          </Popover> */}
+          <motion.a
+            href="/"
+            className="text-sm/6 font-semibold text-white"
+            whileHover={{ scale: 1.07 }}
+            transition={{ duration: 0.1 }}
+          >
+            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+              SẢN PHẨM
+            </span>
+          </motion.a>
+          <motion.a
+            href="/sharing"
+            className="text-sm/6 font-semibold text-white"
+            whileHover={{ scale: 1.07 }}
+            transition={{ duration: 0.1 }}
+          >
+            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+              CHIA SẺ
+            </span>
+          </motion.a>
+          <motion.a
+            href="/"
+            className="text-sm/6 font-semibold text-white"
+            whileHover={{ scale: 1.07 }}
+            transition={{ duration: 0.1 }}
+          >
+            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+              GIỚI THIỆU
+            </span>
+          </motion.a>
+          <motion.a
+            href="/"
+            className="text-sm/6 font-semibold text-white"
+            whileHover={{ scale: 1.07 }}
+            transition={{ duration: 0.1 }}
+          >
+            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
+              LIÊN HỆ
+            </span>
+          </motion.a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-white px-1">
@@ -157,6 +197,12 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  TRANG CHỦ
+                </a>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                     Sản phẩm
