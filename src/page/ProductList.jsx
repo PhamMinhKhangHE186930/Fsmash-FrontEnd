@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Categories, Product } from "../datasets/dataset1";
 import Header from "../component/Header";
+import Footer from "../component/Footer";
+import { Star, Eye, CheckCircle } from 'lucide-react';
 
 const ProductList = () => {
+
   const INITIAL_COUNT = 8; // load 2 hàng đầu
   const LOAD_MORE = 8;
 
@@ -12,8 +15,10 @@ const ProductList = () => {
     Product.slice(0, INITIAL_COUNT)
   );
   const [isLoading, setIsLoading] = useState(false);
+  const ref = useRef(null);
 
   const sentinelRef = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   useEffect(() => {
     setVisibleProducts(Product.slice(0, renderCount));
@@ -52,22 +57,48 @@ const ProductList = () => {
   }, [isLoading, renderCount]);
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen -z-20">
       {/* Header cố định */}
       <div className="fixed top-0 z-50 w-full">
         <Header />
       </div>
 
-      <h1 className="text-3xl font-bold mb-8 mt-20 text-center">
-        BadmintonPro
-      </h1>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-20 pt-32"
+      >
+        {/* Tag nhỏ phía trên */}
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="inline-block mb-4 px-6 py-2 bg-gradient-to-r from-blue-100 to-green-100 rounded-full border border-blue-200"
+        >
+          <span className="text-blue-600 font-medium">Danh mục sản phẩm</span>
+        </motion.div>
+
+        {/* Tiêu đề chính */}
+        <h2 className="mb-6 text-3xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-green-600 bg-clip-text text-transparent">
+          Đã được kiểm chứng bởi chuyên gia
+        </h2>
+
+        {/* Mô tả */}
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          Mọi thiết bị bạn thấy ở đây đều đã được tôi kiểm tra nghiêm ngặt qua hơn 15 năm chơi chuyên nghiệp. Đây không chỉ là những lời khuyên, mà còn là những sản phẩm đã được chứng minh hiệu quả.
+        </p>
+      </motion.div>
+
+
 
       {/* Grid sản phẩm */}
       <motion.div
         initial={{ opacity: 0, y: -60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        className="grid grid-cols-1 pl-10 pr-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         {visibleProducts.map((item, index) => {
           const categoryName =
@@ -103,7 +134,11 @@ const ProductList = () => {
                 {/* Overlay chỉ nằm trên ảnh */}
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center pb-5 justify-end text-white opacity-0 group-hover:opacity-100 transition">
                   <button className="px-4 py-2 bg-white text-black rounded-lg font-semibold shadow">
-                    View Details
+                    <span className="flex items-center gap-2">
+                      <Eye className="w-4 h-4" />
+                      View Details
+                    </span>
+
                   </button>
                 </div>
               </div>
@@ -172,6 +207,9 @@ const ProductList = () => {
         ) : (
           <span>Đã hiển thị tất cả sản phẩm</span>
         )}
+      </div>
+      <div className="relative z-10">
+        <Footer />
       </div>
     </div>
   );

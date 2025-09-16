@@ -52,12 +52,12 @@ export default function Header() {
     <header className="bg-orange-500 relative bg-opacity-80 backdrop-blur-md">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Fsmash</span>
             <img
               alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
+              src="/Fsmash.png"
+              className="h-8 w-auto rounded-full"
             />
           </a>
         </div>
@@ -116,7 +116,7 @@ export default function Header() {
             </PopoverPanel>
           </Popover> */}
           <motion.a
-            href="/"
+            href="/products"
             className="text-sm/6 font-semibold text-white"
             whileHover={{ scale: 1.07 }}
             transition={{ duration: 0.1 }}
