@@ -95,7 +95,7 @@ const Sharing = () => {
     return (
         <div className='pb-20'>
             <div className='sticky top-0 z-50 w-full'>
-                <Header />
+                <Header currentTab={3}/>
             </div>
             <motion.div
                 className="fixed inset-0 bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50 -z-10"
