@@ -36,12 +36,21 @@ const products = [
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
   { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
+
+const navigation = [
+  { name: "TRANG CHỦ", href: "/" },
+  { name: "SẢN PHẨM", href: "/products" },
+  { name: "CHIA SẺ", href: "/sharing" },
+  { name: "GIỚI THIỆU", href: "/about" },
+  { name: "LIÊN HỆ", href: "/contact" },
+]
+
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 
-export default function Header() {
+export default function Header({ currentTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const {
     categories, brands,
@@ -72,99 +81,30 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <motion.a
-            href="/"
-            className="text-sm/6 font-semibold text-white"
-            whileHover={{ scale: 1.07 }}
-            transition={{ duration: 0.1 }}
-          >
-            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-              TRANG CHỦ
-            </span>
-          </motion.a>
-          {/* <Popover>
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-                SẢN PHẨM
-              </span>
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute left-0 z-10 mt-3 w-full overflow-hidden rounded-none bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+          {navigation.map((nav, index) => (
+            <motion.a
+              href={nav.href}
+              initial={currentTab == (index + 1) ? { scale: 1.07 } : { scale: 1 }}
+              className="text-sm/6 font-semibold text-white"
+              whileHover={{ scale: 1.07 }}
+              transition={{ duration: 0.1 }}
             >
-              <div className="p-4">
-                <div className={`grid ${categories.length === 2 ? 'grid-cols-2' :
-                  categories.length === 3 ? 'grid-cols-3' :
-                    categories.length === 4 ? 'grid-cols-4' :
-                      categories.length === 5 ? 'grid-cols-5' :
-                        'grid-cols-1'
-                  }`}>
-                  {categories.map((cate) => (
-                    <div>
-                      <div className='font-semibold uppercase text-orange-500 text-xl border-b-4 border-orange-500' key={cate.id}>{cate.name}</div>
-                      {brands.map(brand => (
-                        <Link to={`/product/${brand.id}`} key={brand.id}>
-                          <div className='font-normal'>{cate.name} {brand.name}</div>
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </PopoverPanel>
-          </Popover> */}
-          <motion.a
-            href="/products"
-            className="text-sm/6 font-semibold text-white"
-            whileHover={{ scale: 1.07 }}
-            transition={{ duration: 0.1 }}
-          >
-            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-              SẢN PHẨM
-            </span>
-          </motion.a>
-          <motion.a
-            href="/sharing"
-            className="text-sm/6 font-semibold text-white"
-            whileHover={{ scale: 1.07 }}
-            transition={{ duration: 0.1 }}
-          >
-            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-              CHIA SẺ
-            </span>
-          </motion.a>
-          <motion.a
-            href="/"
-            className="text-sm/6 font-semibold text-white"
-            whileHover={{ scale: 1.07 }}
-            transition={{ duration: 0.1 }}
-          >
-            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-              GIỚI THIỆU
-            </span>
-          </motion.a>
-          <motion.a
-            href="/"
-            className="text-sm/6 font-semibold text-white"
-            whileHover={{ scale: 1.07 }}
-            transition={{ duration: 0.1 }}
-          >
-            <span className='relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'>
-              LIÊN HỆ
-            </span>
-          </motion.a>
+              <span className=
+                {currentTab !== (index + 1) ?
+                  'relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full'
+                  : 'relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 after:w-full'}>
+                {nav.name}
+              </span>
+            </motion.a>
+          ))}
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm/6 font-semibold text-white px-1 flex">
+            <PhoneIcon aria-hidden="true" className="size-6 text-white" />
+            <span className='ml-1'>039 876 2538</span>
+          </a>
           <a href="#" className="text-sm/6 font-semibold text-white px-1">
             <MagnifyingGlassIcon aria-hidden="true" className="size-6 text-white" />
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-white px-1">
-            <UserIcon aria-hidden="true" className="size-6 text-white" />
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-white px-1">
-            <HeartIcon aria-hidden="true" className="size-6 text-white" />
           </a>
           <a href="#" className="text-sm/6 font-semibold text-white px-1">
             <ShoppingBagIcon aria-hidden="true" className="size-6 text-white" />

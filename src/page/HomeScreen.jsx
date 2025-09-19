@@ -22,7 +22,7 @@ function HomeScreen() {
     return (
         <div>
             <div className='fixed top-0 z-50 w-full'>
-                <Header />
+                <Header currentTab={1} />
             </div>
             <ReactFullpage
                 render={() => (
