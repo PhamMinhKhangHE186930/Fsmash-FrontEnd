@@ -41,7 +41,7 @@ const navigation = [
   { name: "TRANG CHỦ", href: "/" },
   { name: "SẢN PHẨM", href: "/products" },
   { name: "CHIA SẺ", href: "/sharing" },
-  { name: "GIỚI THIỆU", href: "/about" },
+  // { name: "GIỚI THIỆU", href: "/about" },
   { name: "LIÊN HỆ", href: "/contact" },
 ]
 
@@ -65,7 +65,7 @@ export default function Header({ currentTab }) {
             <span className="sr-only">Fsmash</span>
             <img
               alt=""
-              src="/Fsmash.png"
+              src="/Fsmash_1.jpg"
               className="h-8 w-auto rounded-full"
             />
           </a>
