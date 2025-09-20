@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PortfolioScreen from "./page/PortfolioScreen";
 import Sharing from "./page/Sharing";
 import ProductList from "./page/ProductList";
+import Contact from "./page/Contact";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioScreen />} />
           <Route path="/sharing" element={<Sharing />} />
           <Route path="/products" element={<ProductList />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </HomeScreenProvider>
     </Router>
