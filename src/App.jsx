@@ -4,8 +4,7 @@ import HomeScreen from "./page/HomeScreen";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PortfolioScreen from "./page/PortfolioScreen";
 import Sharing from "./page/Sharing";
-import ProductList from "./page/ProductList";
-
+import { ProductList } from "./page/ProductList";
 function App() {
   return (
     <Router>

@@ -56,7 +56,7 @@ export default function Header() {
             <span className="sr-only">Fsmash</span>
             <img
               alt=""
-              src="/Fsmash.png"
+              src="/LogoFsmash.jpg"
               className="h-8 w-auto rounded-full"
             />
           </a>

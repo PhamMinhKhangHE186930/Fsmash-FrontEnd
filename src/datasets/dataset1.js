@@ -19,46 +19,69 @@ export const Brands = [
 export const Product = [
     // Giày cầu lông
     {
-        id: '1', productCode: 'FSM0001', name: 'Giày cầu lông Yonex SHB 470CR', image: ['https://cdn.shopvnb.com/uploads/gallery/giay-cau-long-yonex-shb-470cr-trang-vang-noi-dia-trung_1750885178.webp'], price: 1570000, quantity: 20, description: '', brand: '1', category: '1',
+        id: '1', productCode: 'FSM0001', name: 'Băng cao su quấn cán vợt', image: ['/Product-image/cuoncanvot.jpg'], price: 10000, quantity: 500, description: 'Ngon bổ rẻ', brand: '1', category: '1', testimonial: 'Consistent flight pattern in all weather conditions'
     },
-    { id: '2', productCode: 'FSM0002', name: 'Giày cầu lông Victor A610', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-victor-a610-vang-2.webp'], price: 1790000, quantity: 10, description: '', brand: '2', category: '1' },
-    { id: '3', productCode: 'FSM0003', name: 'Giày cầu lông Lining AYTP', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-lining-aytp-012-1-1.webp'], price: 1650000, quantity: 8, description: '', brand: '3', category: '1' },
-    { id: '4', productCode: 'FSM0004', name: 'Giày cầu lông Mizuno Wave Fang', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-mizuno-wave-fang-rx2-trang-den-3.webp'], price: 1890000, quantity: 6, description: '', brand: '4', category: '1' },
-    { id: '5', productCode: 'FSM0005', name: 'Giày cầu lông Kamito Skyfire', image: ['https://giaykamito.com/wp-content/uploads/2023/11/giay-cau-long-kamito-tm-legend-cam-1-min.jpg'], price: 1450000, quantity: 12, description: '', brand: '6', category: '1' },
-    { id: '6', productCode: 'FSM0006', name: 'Giày cầu lông Adidas Adizero', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-adidas-adizero-fastcourt-tokyo-m-red-chinh-hang-1.webp'], price: 1990000, quantity: 5, description: '', brand: '5', category: '1' },
+    { id: '2', productCode: 'FSM0002', name: 'Băng cuốn cán vợt', image: ['/Product-image/bangcaosu.jpg'], price: 170000, quantity: 20, description: '170.000 cho 1 thùng 20 cái', brand: '2', category: '1', testimonial: 'Perfect balance and power for aggressive gameplay' },
+    { id: '3', productCode: 'FSM0003', name: 'Tất thể thao Drifit', image: ['/Product-image/tatdrifit.jpg'], price: 1650000, quantity: 8, description: 'Vừa dày vừa êm', brand: '3', category: '1', testimonial: 'Exceptional grip and ankle support during intense rallies' },
+    { id: '4', productCode: 'FSM0004', name: 'Tất thể thao Nikke', image: ['/Product-image/tatnikke.jpg'], price: 1890000, quantity: 6, description: 'Thuận tiện, thoải mái', brand: '4', category: '1', testimonial: 'Perfect tension retention and responsive feel' },
+    // { id: '5', productCode: 'FSM0005', name: 'Giày cầu lông Kamito Skyfire', image: ['https://giaykamito.com/wp-content/uploads/2023/11/giay-cau-long-kamito-tm-legend-cam-1-min.jpg'], price: 1450000, quantity: 12, description: '', brand: '6', category: '1' },
+    // { id: '6', productCode: 'FSM0006', name: 'Giày cầu lông Adidas Adizero', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-adidas-adizero-fastcourt-tokyo-m-red-chinh-hang-1.webp'], price: 1990000,  : 5, description: '', brand: '5', category: '1' },
 
     // Bao vợt cầu lông
-    { id: '7', productCode: 'FSM0007', name: 'Bao vợt Yonex 3 ngăn', image: ['https://via.placeholder.com/300x300'], price: 970000, quantity: 15, description: '', brand: '1', category: '2' },
-    { id: '8', productCode: 'FSM0008', name: 'Bao vợt Victor Tour Pro', image: ['https://via.placeholder.com/300x300'], price: 850000, quantity: 20, description: '', brand: '2', category: '2' },
-    { id: '9', productCode: 'FSM0009', name: 'Bao vợt Lining X700', image: ['https://via.placeholder.com/300x300'], price: 900000, quantity: 17, description: '', brand: '3', category: '2' },
-    { id: '10', productCode: 'FSM0010', name: 'Bao vợt Kamito Classic', image: ['https://via.placeholder.com/300x300'], price: 780000, quantity: 8, description: '', brand: '6', category: '2' },
-    { id: '11', productCode: 'FSM0011', name: 'Bao vợt Mizuno Double Pro', image: ['https://via.placeholder.com/300x300'], price: 920000, quantity: 12, description: '', brand: '4', category: '2' },
-    { id: '12', productCode: 'FSM0012', name: 'Bao vợt Adidas SportBag', image: ['https://via.placeholder.com/300x300'], price: 990000, quantity: 9, description: '', brand: '5', category: '2' },
+    // { id: '7', productCode: 'FSM0007', name: 'Bao vợt Yonex 3 ngăn', image: ['https://via.placeholder.com/300x300'], price: 970000, quantity: 15, description: '', brand: '1', category: '2' },
+    // { id: '8', productCode: 'FSM0008', name: 'Bao vợt Victor Tour Pro', image: ['https://via.placeholder.com/300x300'], price: 850000, quantity: 20, description: '', brand: '2', category: '2' },
+    // { id: '9', productCode: 'FSM0009', name: 'Bao vợt Lining X700', image: ['https://via.placeholder.com/300x300'], price: 900000, quantity: 17, description: '', brand: '3', category: '2' },
+    // { id: '10', productCode: 'FSM0010', name: 'Bao vợt Kamito Classic', image: ['https://via.placeholder.com/300x300'], price: 780000, quantity: 8, description: '', brand: '6', category: '2' },
+    // { id: '11', productCode: 'FSM0011', name: 'Bao vợt Mizuno Double Pro', image: ['https://via.placeholder.com/300x300'], price: 920000, quantity: 12, description: '', brand: '4', category: '2' },
+    // { id: '12', productCode: 'FSM0012', name: 'Bao vợt Adidas SportBag', image: ['https://via.placeholder.com/300x300'], price: 990000, quantity: 9, description: '', brand: '5', category: '2' },
 
     // Phụ kiện cầu lông
-    { id: '13', productCode: 'FSM0013', name: 'Cuốn cán vợt Yonex AC102', image: ['https://via.placeholder.com/300x300'], price: 20000, quantity: 50, description: '', brand: '1', category: '3' },
-    { id: '14', productCode: 'FSM0014', name: 'Dây đan Victor VS-890', image: ['https://via.placeholder.com/300x300'], price: 50000, quantity: 30, description: '', brand: '2', category: '3' },
-    { id: '15', productCode: 'FSM0015', name: 'Vớ cầu lông Kamito Elite', image: ['https://via.placeholder.com/300x300'], price: 25000, quantity: 40, description: '', brand: '6', category: '3' },
-    { id: '16', productCode: 'FSM0016', name: 'Mút tay cầm Lining XT', image: ['https://via.placeholder.com/300x300'], price: 15000, quantity: 60, description: '', brand: '3', category: '3' },
-    { id: '17', productCode: 'FSM0017', name: 'Túi cầu lông Mizuno Mesh', image: ['https://via.placeholder.com/300x300'], price: 30000, quantity: 25, description: '', brand: '4', category: '3' },
-    { id: '18', productCode: 'FSM0018', name: 'Bọc cán vợt Adidas', image: ['https://via.placeholder.com/300x300'], price: 22000, quantity: 35, description: '', brand: '5', category: '3' },
+    // { id: '13', productCode: 'FSM0013', name: 'Cuốn cán vợt Yonex AC102', image: ['https://via.placeholder.com/300x300'], price: 20000, quantity: 50, description: '', brand: '1', category: '3' },
+    // { id: '14', productCode: 'FSM0014', name: 'Dây đan Victor VS-890', image: ['https://via.placeholder.com/300x300'], price: 50000, quantity: 30, description: '', brand: '2', category: '3' },
+    // { id: '15', productCode: 'FSM0015', name: 'Vớ cầu lông Kamito Elite', image: ['https://via.placeholder.com/300x300'], price: 25000, quantity: 40, description: '', brand: '6', category: '3' },
+    // { id: '16', productCode: 'FSM0016', name: 'Mút tay cầm Lining XT', image: ['https://via.placeholder.com/300x300'], price: 15000, quantity: 60, description: '', brand: '3', category: '3' },
+    // { id: '17', productCode: 'FSM0017', name: 'Túi cầu lông Mizuno Mesh', image: ['https://via.placeholder.com/300x300'], price: 30000, quantity: 25, description: '', brand: '4', category: '3' },
+    // { id: '18', productCode: 'FSM0018', name: 'Bọc cán vợt Adidas', image: ['https://via.placeholder.com/300x300'], price: 22000, quantity: 35, description: '', brand: '5', category: '3' },
 
     // Quần áo cầu lông
-    { id: '19', productCode: 'FSM0019', name: 'Áo Yonex Men 1030', image: ['https://via.placeholder.com/300x300'], price: 115000, quantity: 10, description: '', brand: '1', category: '4' },
-    { id: '20', productCode: 'FSM0020', name: 'Quần cầu lông Victor Short', image: ['https://via.placeholder.com/300x300'], price: 95000, quantity: 8, description: '', brand: '2', category: '4' },
-    { id: '21', productCode: 'FSM0021', name: 'Áo Lining Pro Dry', image: ['https://via.placeholder.com/300x300'], price: 109000, quantity: 14, description: '', brand: '3', category: '4' },
-    { id: '22', productCode: 'FSM0022', name: 'Áo Mizuno SpeedDry', image: ['https://via.placeholder.com/300x300'], price: 120000, quantity: 7, description: '', brand: '4', category: '4' },
-    { id: '23', productCode: 'FSM0023', name: 'Áo Kamito Legend', image: ['https://via.placeholder.com/300x300'], price: 89000, quantity: 9, description: '', brand: '6', category: '4' },
-    { id: '24', productCode: 'FSM0024', name: 'Bộ đồ cầu lông Adidas Set', image: ['https://via.placeholder.com/300x300'], price: 135000, quantity: 6, description: '', brand: '5', category: '4' },
+    // { id: '19', productCode: 'FSM0019', name: 'Áo Yonex Men 1030', image: ['https://via.placeholder.com/300x300'], price: 115000, quantity: 10, description: '', brand: '1', category: '4' },
+    // { id: '20', productCode: 'FSM0020', name: 'Quần cầu lông Victor Short', image: ['https://via.placeholder.com/300x300'], price: 95000, quantity: 8, description: '', brand: '2', category: '4' },
+    // { id: '21', productCode: 'FSM0021', name: 'Áo Lining Pro Dry', image: ['https://via.placeholder.com/300x300'], price: 109000, quantity: 14, description: '', brand: '3', category: '4' },
+    // { id: '22', productCode: 'FSM0022', name: 'Áo Mizuno SpeedDry', image: ['https://via.placeholder.com/300x300'], price: 120000, quantity: 7, description: '', brand: '4', category: '4' },
+    // { id: '23', productCode: 'FSM0023', name: 'Áo Kamito Legend', image: ['https://via.placeholder.com/300x300'], price: 89000, quantity: 9, description: '', brand: '6', category: '4' },
+    // { id: '24', productCode: 'FSM0024', name: 'Bộ đồ cầu lông Adidas Set', image: ['https://via.placeholder.com/300x300'], price: 135000, quantity: 6, description: '', brand: '5', category: '4' },
 
-    // Bổ sung thêm vài sản phẩm ngẫu nhiên
-    { id: '25', productCode: 'FSM0025', name: 'Giày cầu lông Yonex SHB Comfort', image: ['https://via.placeholder.com/300x300'], price: 168000, quantity: 12, description: '', brand: '1', category: '1' },
-    { id: '26', productCode: 'FSM0026', name: 'Bao vợt cầu lông Yonex Pro Series', image: ['https://via.placeholder.com/300x300'], price: 95000, quantity: 10, description: '', brand: '1', category: '2' },
-    { id: '27', productCode: 'FSM0027', name: 'Cuốn cán cầu lông Victor Comfort', image: ['https://via.placeholder.com/300x300'], price: 18000, quantity: 28, description: '', brand: '2', category: '3' },
-    { id: '28', productCode: 'FSM0028', name: 'Áo cầu lông Lining Premium', image: ['https://via.placeholder.com/300x300'], price: 125000, quantity: 11, description: '', brand: '3', category: '4' },
-    { id: '29', productCode: 'FSM0029', name: 'Vớ cầu lông Adidas Elite', image: ['https://via.placeholder.com/300x300'], price: 29000, quantity: 20, description: '', brand: '5', category: '3' },
-    { id: '30', productCode: 'FSM0030', name: 'Giày cầu lông Kamito Blaze', image: ['https://via.placeholder.com/300x300'], price: 149000, quantity: 10, description: '', brand: '6', category: '1' },
+    // // Bổ sung thêm vài sản phẩm ngẫu nhiên
+    // { id: '25', productCode: 'FSM0025', name: 'Giày cầu lông Yonex SHB Comfort', image: ['https://via.placeholder.com/300x300'], price: 168000, quantity: 12, description: '', brand: '1', category: '1' },
+    // { id: '26', productCode: 'FSM0026', name: 'Bao vợt cầu lông Yonex Pro Series', image: ['https://via.placeholder.com/300x300'], price: 95000, quantity: 10, description: '', brand: '1', category: '2' },
+    // { id: '27', productCode: 'FSM0027', name: 'Cuốn cán cầu lông Victor Comfort', image: ['https://via.placeholder.com/300x300'], price: 18000, quantity: 28, description: '', brand: '2', category: '3' },
+    // { id: '28', productCode: 'FSM0028', name: 'Áo cầu lông Lining Premium', image: ['https://via.placeholder.com/300x300'], price: 125000, quantity: 11, description: '', brand: '3', category: '4' },
+    // { id: '29', productCode: 'FSM0029', name: 'Vớ cầu lông Adidas Elite', image: ['https://via.placeholder.com/300x300'], price: 29000, quantity: 20, description: '', brand: '5', category: '3' },
+    // { id: '30', productCode: 'FSM0030', name: 'Giày cầu lông Kamito Blaze', image: ['https://via.placeholder.com/300x300'], price: 149000, quantity: 10, description: '', brand: '6', category: '1' },
 ];
+export const Clothers = [
+    { id: '6', productCode: 'FSM0006', name: 'Áo Argentina', image: ['/Product-image/argentina.jpg'], description: '' },
+    { id: '7', productCode: 'FSM0007', name: 'Áo Arsenal sân khách 2025', image: ['/Product-image/arsenal_sk.jpg'], description: '' },
+    { id: '8', productCode: 'FSM0008', name: 'Áo Arsenal', image: ['/Product-image/arsenal.jpg'], description: '' },
+    { id: '9', productCode: 'FSM0009', name: 'Áo Tây Ban Nha', image: ['/Product-image/spain.jpg'], description: '' },
+    { id: '10', productCode: 'FSM0010', name: 'Áo Barcelona', image: ['/Product-image/barcelona.jpg'], description: '' },
+    { id: '11', productCode: 'FSM0011', name: 'Áo Bồ Đào Nha', image: ['/Product-image/portugal.jpg'], description: '' },
+    { id: '12', productCode: 'FSM0012', name: 'Áo PSG', image: ['/Product-image/psg.jpg'], description: '' },
+    { id: '13', productCode: 'FSM0013', name: 'Áo Real Madrid', image: ['/Product-image/realmadrid.jpg'], description: '' },
+    { id: '14', productCode: 'FSM0014', name: 'Áo Manchester United', image: ['/Product-image/manunited.jpg'], description: '' },
+    { id: '15', productCode: 'FSM0015', name: 'Áo Manchester City', image: ['/Product-image/mancity.jpg'], description: '' },
+    { id: '16', productCode: 'FSM0016', name: 'Áo Chelsea', image: ['/Product-image/chelsea.jpg'], description: '' },
+    { id: '17', productCode: 'FSM0017', name: 'Áo Liverpool', image: ['/Product-image/liverpool.jpg'], description: '' },
+    { id: '18', productCode: 'FSM0018', name: 'Áo Nhật Bản', image: ['/Product-image/japan.jpg'], description: '' },
+    { id: '19', productCode: 'FSM0019', name: 'Áo Inter Miami', image: ['/Product-image/intermiami.jpg'], description: '' },
+    { id: '20', productCode: 'FSM0020', name: 'Áo Real sân khách 2025', image: ['/Product-image/real_sk.jpg'], description: '' },
+    { id: '21', productCode: 'FSM0021', name: 'Áo Bayern Munich', image: ['/Product-image/bayernmmunich.jpg'], description: '' },
+    { id: '22', productCode: 'FSM0022', name: 'Áo Real Madrid', image: ['/Product-image/realmadrid2.jpg'], description: '' },
+
+
+
+];
+
 
 export const ShoeSize = [
     { id: '1', size: '36' },
