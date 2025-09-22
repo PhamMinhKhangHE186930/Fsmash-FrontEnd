@@ -24,7 +24,7 @@ export function ProductList() {
         <div className="bg-gray-50 min-h-screen -z-20">
             {/* Header cố định */}
             <div className="fixed top-0 z-50 w-full">
-                <Header />
+                <Header currentTab={2} />
             </div>
             {/* Banner */}
             <div className="relative pt-16"> {/* để tránh đè lên header */}

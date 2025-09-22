@@ -40,7 +40,7 @@ const socialPlatforms = [
     },
     {
         platform: "Email",
-        icon: <i class="fa-solid fa-envelope"></i>,
+        icon: <i className="fa-solid fa-envelope"></i>,
         handle: "Nguyễn Trung Đức",
         content: "Liên hệ tư vấn, hợp tác",
         color: "from-green-500 to-green-600",

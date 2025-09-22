@@ -32,7 +32,7 @@ const Sharing = () => {
         },
         {
             phase: "Kéo giãn",
-            icon: <i class="fa-solid fa-bullseye" />,
+            icon: <i className="fa-solid fa-bullseye" />,
             duration: "15-20 phút",
             tips: [
                 "Giữ mỗi động tác kéo giãn trong ít nhất 15-30 giây",
