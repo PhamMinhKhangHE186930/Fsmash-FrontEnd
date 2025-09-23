@@ -19,11 +19,13 @@ export const Brands = [
 export const Product = [
     // Giày cầu lông
     {
-        id: '1', productCode: 'FSM0001', name: 'Băng cao su quấn cán vợt', image: ['/Product-image/cuoncanvot.jpg'], price: 10000, quantity: 500, description: 'Ngon bổ rẻ', brand: '1', category: '1', testimonial: 'Consistent flight pattern in all weather conditions'
+        id: '1', productCode: 'FSM0001', name: 'Băng cao su quấn cán vợt', image: ['/Product-image/cuoncan.jpg'], price: 17000, quantity: 500, description: 'Ngon bổ rẻ', brand: '1', category: '1', testimonial: 'Consistent flight pattern in all weather conditions'
     },
-    { id: '2', productCode: 'FSM0002', name: 'Băng cuốn cán vợt', image: ['/Product-image/bangcaosu.jpg'], price: 170000, quantity: 20, description: '170.000 cho 1 thùng 20 cái', brand: '2', category: '1', testimonial: 'Perfect balance and power for aggressive gameplay' },
-    { id: '3', productCode: 'FSM0003', name: 'Tất thể thao Drifit', image: ['/Product-image/tatdrifit.jpg'], price: 1650000, quantity: 8, description: 'Vừa dày vừa êm', brand: '3', category: '1', testimonial: 'Exceptional grip and ankle support during intense rallies' },
-    { id: '4', productCode: 'FSM0004', name: 'Tất thể thao Nikke', image: ['/Product-image/tatnikke.jpg'], price: 1890000, quantity: 6, description: 'Thuận tiện, thoải mái', brand: '4', category: '1', testimonial: 'Perfect tension retention and responsive feel' },
+    { id: '2', productCode: 'FSM0002', name: 'Băng cuốn cổ tay', image: ['/Product-image/bangcotay.png'], price: 50000, quantity: 40, description: '170.000 cho 1 thùng 20 cái', brand: '2', category: '1', testimonial: 'Perfect balance and power for aggressive gameplay' },
+    { id: '3', productCode: 'FSM0003', name: 'Tất thể thao Drifit', image: ['/Product-image/tatdrifit.jpg'], price: 15000, quantity: 40, description: 'Vừa dày vừa êm', brand: '3', category: '1', testimonial: 'Exceptional grip and ankle support during intense rallies' },
+    { id: '4', productCode: 'FSM0004', name: 'Tất thể thao Nikke', image: ['/Product-image/tatnikke.jpg'], price: 20000, quantity: 40, description: 'Thuận tiện, thoải mái', brand: '4', category: '1', testimonial: 'Perfect tension retention and responsive feel' },
+
+
     // { id: '5', productCode: 'FSM0005', name: 'Giày cầu lông Kamito Skyfire', image: ['https://giaykamito.com/wp-content/uploads/2023/11/giay-cau-long-kamito-tm-legend-cam-1-min.jpg'], price: 1450000, quantity: 12, description: '', brand: '6', category: '1' },
     // { id: '6', productCode: 'FSM0006', name: 'Giày cầu lông Adidas Adizero', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-adidas-adizero-fastcourt-tokyo-m-red-chinh-hang-1.webp'], price: 1990000,  : 5, description: '', brand: '5', category: '1' },
 
@@ -77,6 +79,32 @@ export const Clothers = [
     { id: '20', productCode: 'FSM0020', name: 'Áo Real sân khách 2025', image: ['/Product-image/real_sk.jpg'], description: '' },
     { id: '21', productCode: 'FSM0021', name: 'Áo Bayern Munich', image: ['/Product-image/bayernmmunich.jpg'], description: '' },
     { id: '22', productCode: 'FSM0022', name: 'Áo Real Madrid', image: ['/Product-image/realmadrid2.jpg'], description: '' },
+    { id: '23', productCode: 'FSM0023', name: 'Áo PSG', image: ['/Product-image/psg.jpg'], description: '' },
+    { id: '24', productCode: 'FSM0024', name: 'Áo PSG', image: ['/Product-image/psg2.jpg'], description: '' },
+    { id: '25', productCode: 'FSM0025', name: 'Áo Tottenham', image: ['/Product-image/tottenham.jpg'], description: '' },
+    { id: '26', productCode: 'FSM0026', name: 'Áo Al-nassar', image: ['/Product-image/alnassar.jpg'], description: '' },
+    { id: '27', productCode: 'FSM0027', name: 'Áo Al-nassar', image: ['/Product-image/alnassar2.jpg'], description: '' },
+    { id: '28', productCode: 'FSM0028', name: 'Áo Ajax', image: ['/Product-image/ajax.jpg'], description: '' },
+    { id: '29', productCode: 'FSM0029', name: 'Áo Ajax', image: ['/Product-image/ajax1.jpg'], description: '' },
+    { id: '30', productCode: 'FSM0030', name: 'Áo Atletico Madrid', image: ['/Product-image/alentico.jpg'], description: '' },
+    { id: '31', productCode: 'FSM0031', name: 'Áo Al-hilal', image: ['/Product-image/alhilal.jpg'], description: '' },
+    { id: '32', productCode: 'FSM0032', name: 'Áo Aston Villa', image: ['/Product-image/astonvilla.jpg'], description: '' },
+    { id: '33', productCode: 'FSM0033', name: 'Áo Barcelona', image: ['/Product-image/barcelona2.jpg'], description: '' },
+    { id: '34', productCode: 'FSM0034', name: 'Áo Bỉ', image: ['/Product-image/belgumi.jpg'], description: '' },
+    { id: '35', productCode: 'FSM0035', name: 'Áo Đội tuyển Anh', image: ['/Product-image/england.jpg'], description: '' },
+    { id: '36', productCode: 'FSM0036', name: 'Áo Fullham', image: ['/Product-image/fullham.jpg'], description: '' },
+    { id: '37', productCode: 'FSM0037', name: 'Áo Đức', image: ['/Product-image/germany.jpg'], description: '' },
+    { id: '38', productCode: 'FSM0038', name: 'Áo Inter Milan ', image: ['/Product-image/intermilan.jpg'], description: '' },
+    { id: '39', productCode: 'FSM0039', name: 'Áo Đội tuyển Ý', image: ['/Product-image/italia.jpg'], description: '' },
+    { id: '40', productCode: 'FSM0040', name: 'Áo Juventus', image: ['/Product-image/juventus.jpg'], description: '' },
+    { id: '41', productCode: 'FSM0041', name: 'Áo Liverpool', image: ['/Product-image/liverpool1.jpg'], description: '' },
+    { id: '42', productCode: 'FSM0042', name: 'Áo Manchester City', image: ['/Product-image/mancity1.jpg'], description: '' },
+    { id: '43', productCode: 'FSM0043', name: 'Áo Manchester United', image: ['/Product-image/manunited1.jpg'], description: '' },
+    { id: '44', productCode: 'FSM0044', name: 'Áo Sporting Lisbon', image: ['/Product-image/sporting.jpg'], description: '' },
+    { id: '45', productCode: 'FSM0045', name: 'Áo Bồ Đào Nha', image: ['/Product-image/portugal1.jpg'], description: '' },
+
+    { id: '46', productCode: 'FSM0046', name: 'Áo Chelsea', image: ['/Product-image/chelse1.jpg'], description: '' },
+
 
 
 
