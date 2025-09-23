@@ -84,6 +84,7 @@ const Footer = () => {
                     <p className='text-gray-300 flex mb-3'>
                         Liên hệ
                     </p>
+
                 </div>
                 <hr className='border-white col-span-12' />
                 <div className='col-span-full'>
