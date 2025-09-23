@@ -1,5 +1,5 @@
 import { useInView, motion, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "../component/Header";
 import { Clothers, Product } from "../datasets/dataset1";
 import { Star, Eye } from "lucide-react";
@@ -12,14 +12,20 @@ export function ProductList() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
-    const [sliderRef] = useKeenSlider({
-        mode: "free", 
-        slides: {
-            perView: 5,
-            spacing: 16,
-        },
+    const [sliderRef, slider] = useKeenSlider({
+        mode: "free",
+        slides: { perView: 5, spacing: 16 },
     });
+    const filteredClothers = Clothers.filter(item =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    // Khi danh sách áo thay đổi, update slider
+    useEffect(() => {
+        slider.current?.update();
+    }, [filteredClothers, slider]);
+
     return (
         <div className="bg-gray-50 min-h-screen -z-20">
             {/* Header cố định */}
@@ -218,32 +224,37 @@ export function ProductList() {
                                 Mỗi sản phẩm đều được lựa chọn kỹ lưỡng để mang lại trải nghiệm tốt nhất cho bạn.
                             </p>
                         </motion.div>
+
+
+                        {/* Thanh search */}
+                        <div className="flex justify-center mb-6">
+                            <input
+                                type="text"
+                                placeholder="Tìm áo theo tên..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                            />
+                        </div>
+
                         {/* Slider */}
-                        <div ref={sliderRef} className="keen-slider">
-                            {Clothers.map((item, index) => (
+                        <div key={filteredClothers.length} ref={sliderRef} className="keen-slider">
+                            {filteredClothers.map((item) => (
                                 <motion.div
                                     key={item.id}
-                                    className="keen-slider__slide mx-1 cursor-pointer"
+                                    className="keen-slider__slide mx-1 cursor-pointer h-108"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{
-                                        duration: 0.5,
-                                        ease: "easeOut",
-                                        delay: index * 0.1,
-                                    }}
+                                    transition={{ duration: 0.5 }}
                                     onClick={() => setSelectedItem(item)}
                                 >
                                     <div className="bg-white rounded-2xl shadow overflow-hidden h-full">
                                         <motion.div
-                                            whileHover={{
-                                                y: -10,
-                                                scale: 1.03,
-                                                boxShadow: "0px 15px 25px rgba(0,0,0,0.2)",
-                                            }}
+                                            whileHover={{ y: -10, scale: 1.03, boxShadow: "0px 15px 25px rgba(0,0,0,0.2)" }}
                                             transition={{ duration: 0.3 }}
                                             className="h-full"
                                         >
-                                            <div className="relative h-68 overflow-hidden">
+                                            <div className="relative h-72 overflow-hidden">
                                                 <motion.img
                                                     src={item.image}
                                                     alt={item.name}
@@ -254,9 +265,7 @@ export function ProductList() {
                                             </div>
                                             <div className="p-4">
                                                 <h4 className="text-lg font-semibold mb-2">{item.name}</h4>
-                                                <span className="text-sm text-gray-500">
-                                                    Mã SP: {item.productCode}
-                                                </span>
+                                                <span className="text-sm text-gray-500">Mã SP: {item.productCode}</span>
                                             </div>
                                         </motion.div>
                                     </div>
@@ -280,22 +289,16 @@ export function ProductList() {
                                         animate={{ scale: 1, opacity: 1, y: 0 }}
                                         exit={{ scale: 0.8, opacity: 0, y: 50 }}
                                         transition={{ duration: 0.3 }}
-                                        onClick={(e) => e.stopPropagation()} // tránh đóng khi bấm trong modal
+                                        onClick={(e) => e.stopPropagation()}
                                     >
                                         <img
                                             src={selectedItem.image}
                                             alt={selectedItem.name}
-                                            className="w-full h-102 object-cover rounded-lg mb-4"
+                                            className="w-full h-108 object-cover rounded-lg mb-4"
                                         />
                                         <h3 className="text-xl font-bold mb-2">{selectedItem.name}</h3>
-                                        <p className="text-gray-500 mb-2">
-                                            Mã SP: {selectedItem.productCode}
-                                        </p>
-                                        <p className="text-sm text-gray-600">
-                                            {selectedItem.description || "Chưa có mô tả chi tiết..."}
-                                        </p>
-
-                                        {/* nút đóng */}
+                                        <p className="text-gray-500 mb-2">Mã SP: {selectedItem.productCode}</p>
+                                        <p className="text-sm text-gray-600">{selectedItem.description || "Chưa có mô tả chi tiết..."}</p>
                                         <button
                                             className="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full px-3 py-1"
                                             onClick={() => setSelectedItem(null)}
