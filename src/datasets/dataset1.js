@@ -24,6 +24,8 @@ export const Product = [
     { id: '2', productCode: 'FSM0002', name: 'Băng cuốn cổ tay', image: ['/Product-image/bangcotay.png'], price: 50000, quantity: 40, description: '170.000 cho 1 thùng 20 cái', brand: '2', category: '1', testimonial: 'Perfect balance and power for aggressive gameplay' },
     { id: '3', productCode: 'FSM0003', name: 'Tất thể thao Drifit', image: ['/Product-image/tatdrifit.jpg'], price: 15000, quantity: 40, description: 'Vừa dày vừa êm', brand: '3', category: '1', testimonial: 'Exceptional grip and ankle support during intense rallies' },
     { id: '4', productCode: 'FSM0004', name: 'Tất thể thao Nikke', image: ['/Product-image/tatnikke.jpg'], price: 20000, quantity: 40, description: 'Thuận tiện, thoải mái', brand: '4', category: '1', testimonial: 'Perfect tension retention and responsive feel' },
+
+
     // { id: '5', productCode: 'FSM0005', name: 'Giày cầu lông Kamito Skyfire', image: ['https://giaykamito.com/wp-content/uploads/2023/11/giay-cau-long-kamito-tm-legend-cam-1-min.jpg'], price: 1450000, quantity: 12, description: '', brand: '6', category: '1' },
     // { id: '6', productCode: 'FSM0006', name: 'Giày cầu lông Adidas Adizero', image: ['https://cdn.shopvnb.com/uploads/san_pham/giay-cau-long-adidas-adizero-fastcourt-tokyo-m-red-chinh-hang-1.webp'], price: 1990000,  : 5, description: '', brand: '5', category: '1' },
 
@@ -102,6 +104,7 @@ export const Clothers = [
     { id: '45', productCode: 'FSM0045', name: 'Áo Bồ Đào Nha', image: ['/Product-image/portugal1.jpg'], description: '' },
 
     { id: '46', productCode: 'FSM0046', name: 'Áo Chelsea', image: ['/Product-image/chelse1.jpg'], description: '' },
+
 
 
 

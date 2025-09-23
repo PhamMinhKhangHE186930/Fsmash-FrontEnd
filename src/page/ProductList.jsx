@@ -246,6 +246,7 @@ export function ProductList() {
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
+
                                     onClick={() => setSelectedItem(item)}
                                 >
                                     <div className="bg-white rounded-2xl shadow overflow-hidden h-full">
@@ -255,6 +256,7 @@ export function ProductList() {
                                             className="h-full"
                                         >
                                             <div className="relative h-72 overflow-hidden">
+
                                                 <motion.img
                                                     src={item.image}
                                                     alt={item.name}
@@ -266,6 +268,7 @@ export function ProductList() {
                                             <div className="p-4">
                                                 <h4 className="text-lg font-semibold mb-2">{item.name}</h4>
                                                 <span className="text-sm text-gray-500">Mã SP: {item.productCode}</span>
+
                                             </div>
                                         </motion.div>
                                     </div>
